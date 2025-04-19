@@ -12,8 +12,8 @@
       <PackageReference Include="JetBrains.Annotations" Version="2024.3.0" PrivateAssets="All" />
       
       <!-- External dependencies with open-ended version ranges -->
-      <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.0.0" />
-      <PackageReference Include="Azure.Identity" Version="1.0.0" />
+      <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.2.2" />
+      <PackageReference Include="Azure.Identity" Version="1.10.4" />
       <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
     </ItemGroup>
 

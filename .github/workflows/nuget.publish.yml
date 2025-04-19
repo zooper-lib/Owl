@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - develop
   workflow_dispatch:
 
 permissions:
@@ -59,25 +58,13 @@ jobs:
             exit 1
           fi
 
-      - name: Determine Package Version
+      - name: Set Package Version
         id: set_package_version
         run: |
-          # Determine the current branch
-          CURRENT_BRANCH="${GITHUB_REF#refs/heads/}"
-          echo "Current Branch: $CURRENT_BRANCH"
-
-          # Define release or pre-release based on branch
-          if [ "$CURRENT_BRANCH" == "main" ]; then
-            PACKAGE_VERSION="${VERSION}"
-          else
-            BUILD_NUMBER="${GITHUB_RUN_NUMBER}"
-            PACKAGE_VERSION="${VERSION}-preview.${BUILD_NUMBER}"
-          fi
-
+          # Set package version to the version from Directory.Build.props
+          PACKAGE_VERSION="${VERSION}"
           echo "package_version=${PACKAGE_VERSION}" >> $GITHUB_OUTPUT
-
-          # Debug statement
-          echo "Determined Package Version: $PACKAGE_VERSION"
+          echo "Package Version: $PACKAGE_VERSION"
 
   build-pack-publish:
     needs: setup
@@ -122,7 +109,6 @@ jobs:
   tag:
     needs: [setup, build-pack-publish]
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' # Only create tags on main branch
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v3
