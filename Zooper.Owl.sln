@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zooper.Owl.AzureKeyVault", "Zooper.Owl.AzureKeyVault\Zooper.Owl.AzureKeyVault.csproj", "{8CEC61D8-5F63-45B7-AB6D-66ABA2EB072D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zooper.Owl.HashicorpVault", "Zooper.Owl.HashicorpVault\Zooper.Owl.HashicorpVault.csproj", "{90996C6A-8EEF-40DE-843E-8A3364F7066B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zooper.Owl.AppSettings", "Zooper.Owl.AppSettings\Zooper.Owl.AppSettings.csproj", "{50323135-9A01-4A05-9F1C-36B4CA7CFC05}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8CEC61D8-5F63-45B7-AB6D-66ABA2EB072D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CEC61D8-5F63-45B7-AB6D-66ABA2EB072D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CEC61D8-5F63-45B7-AB6D-66ABA2EB072D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CEC61D8-5F63-45B7-AB6D-66ABA2EB072D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90996C6A-8EEF-40DE-843E-8A3364F7066B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90996C6A-8EEF-40DE-843E-8A3364F7066B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90996C6A-8EEF-40DE-843E-8A3364F7066B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90996C6A-8EEF-40DE-843E-8A3364F7066B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50323135-9A01-4A05-9F1C-36B4CA7CFC05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50323135-9A01-4A05-9F1C-36B4CA7CFC05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50323135-9A01-4A05-9F1C-36B4CA7CFC05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50323135-9A01-4A05-9F1C-36B4CA7CFC05}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
