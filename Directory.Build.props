@@ -8,19 +8,22 @@
         <RepositoryUrl>https://github.com/zooper-lib/Owl</RepositoryUrl>
         <RepositoryType>git</RepositoryType>
         <PackageIcon>icon.png</PackageIcon>
-        <PackageTags>hexagonal;architecture;ports;adapters;clean;architecture;dependency;injection;DI;.NET</PackageTags>
         <PackageReadmeFile>README.md</PackageReadmeFile>
-        <Description>A .NET library for implementing Hexagonal Architecture (Ports and Adapters) pattern with easy dependency injection integration.</Description>
-        <PackageId>Zooper.Owl</PackageId>
 
         <!-- Version information -->
         <Version>1.0.0</Version>
 
+        <!-- Documentation settings -->
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <NoWarn>$(NoWarn);CS1591</NoWarn>
+        <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <IncludeSymbols>true</IncludeSymbols>
+        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+
         <!-- Source linking -->
         <PublishRepositoryUrl>true</PublishRepositoryUrl>
         <EmbedUntrackedSources>true</EmbedUntrackedSources>
-        <IncludeSymbols>true</IncludeSymbols>
-        <SymbolPackageFormat>snupkg</SymbolPackageFormat>
 
         <!-- Use latest C# version -->
         <LangVersion>latest</LangVersion>

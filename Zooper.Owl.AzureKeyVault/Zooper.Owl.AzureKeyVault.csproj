@@ -2,13 +2,19 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <PackageId>Zooper.Owl.AzureKeyVault</PackageId>
+        <Description>A .NET library for secure configuration management with Azure Key Vault integration.</Description>
+        <PackageTags>configuration;secrets;azure-key-vault;.NET</PackageTags>
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.4.0" />
-      <PackageReference Include="Azure.Identity" Version="1.13.2" />
-      <PackageReference Include="JetBrains.Annotations" Version="2024.3.0" />
-      <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.4" />
+      <!-- Use PrivateAssets only for analyzers/internal tools -->
+      <PackageReference Include="JetBrains.Annotations" Version="2024.3.0" PrivateAssets="All" />
+      
+      <!-- External dependencies with open-ended version ranges -->
+      <PackageReference Include="Azure.Extensions.AspNetCore.Configuration.Secrets" Version="1.0.0" />
+      <PackageReference Include="Azure.Identity" Version="1.0.0" />
+      <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.0" />
     </ItemGroup>
 
 </Project>
