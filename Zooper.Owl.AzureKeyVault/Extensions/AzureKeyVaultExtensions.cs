@@ -15,40 +15,6 @@ namespace Zooper.Owl.AzureKeyVault.Extensions;
 public static class AzureKeyVaultExtensions
 {
 	/// <summary>
-	/// Configures Azure Key Vault integration using settings from the application configuration.
-	/// </summary>
-	/// <param name="builder">The host builder to configure.</param>
-	/// <returns>The configured host builder.</returns>
-	/// <exception cref="System.Exception">Thrown when required Azure Key Vault settings are missing from the configuration.</exception>
-	/// <remarks>
-	/// This method expects the following settings in the configuration:
-	/// - Azure:TenantId
-	/// - Azure:KeyVaultUrl
-	/// - Azure:ClientId
-	/// - Azure:ClientSecret
-	/// </remarks>
-	public static IHostBuilder AddAzureKeyVault(this IHostBuilder builder)
-	{
-		return builder.ConfigureAppConfiguration(configurationBuilder =>
-			{
-				var settings = configurationBuilder.Build();
-
-				var tenantId = settings["Azure:TenantId"] ?? throw new("TenantId is missing from settings");
-				var url = settings["Azure:KeyVaultUrl"] ?? throw new("KeyVaultUrl is missing from settings");
-				var clientId = settings["Azure:ClientId"] ?? throw new("ClientId is missing from settings");
-				var clientSecret = settings["Azure:ClientSecret"] ?? throw new("ClientSecret is missing from settings");
-
-				configurationBuilder.AddAzureKeyVault(
-					tenantId,
-					url,
-					clientId,
-					clientSecret
-				);
-			}
-		);
-	}
-
-	/// <summary>
 	/// Configures Azure Key Vault integration using provided credentials.
 	/// </summary>
 	/// <param name="builder">The host builder to configure.</param>
